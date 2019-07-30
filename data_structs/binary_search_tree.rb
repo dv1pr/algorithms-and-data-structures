@@ -35,6 +35,7 @@ end
 
 test_array = []
 test_array |= [(rand 50000)] until test_array.size == 5000
+test_array.sort!
 
 tree = BinaryTree::Node.new(test_array.first) 
 test_array.each { |v| tree.insert(v) }
@@ -46,16 +47,7 @@ Benchmark.ips do |bm|
   bm.compare!
 end
 
-
-
-
-
-
-
-
-
-
-
+# Use for just testing insert and include? methods
 # tree = BinaryTree::Node.new(10)               #=> {10:{}|{}}
 # [5, 15, 3].each {|value| tree.insert(value) } #=> {10:{5:{3:{}|{}}|{}}|{15:{}|{}}}
 # puts tree.include?(10) #=> true

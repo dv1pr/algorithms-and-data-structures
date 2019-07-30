@@ -10,9 +10,7 @@ def minimumSwaps(arr)
     end
   end
   return swaps
-
 end
 
 p minimumSwaps("2 3 4 1 5".split(' ').map(&:to_i))
 p minimumSwaps("1 3 5 2 4 6 7".split(' ').map(&:to_i))
-

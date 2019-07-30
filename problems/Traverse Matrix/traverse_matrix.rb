@@ -11,7 +11,7 @@ require 'matrix'
 # @m.to_a.each {|r| puts r.inspect}
 
 def traverse_from(row, col, i)
-  # if current element what it should in the word index
+  # if current element is what it should in the word index
   if @m[row, col] == @word[i]
     # if it equals and is the last object increase counter and return to previous iteration
     if i == @word.count - 1
